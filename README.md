@@ -124,8 +124,9 @@ Let’s again, ensure that we can access our “tpotce” folder
 
 ## Step 14 Welcome to TPOT:
 You will see the homepage where you can select *Attack Map* and view which attacks are attacking your server and from which region the attack is coming from. This is a good way to create a “sitting duck” while you watch and study your attacker’s patterns. 
-<img src= "https://github.com/ArchAndrew/Test/assets/125866011/b3bcd586-98ae-4785-bdb2-84dd2513a54e" alt="image description" style="width:450px;">
-
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/23webportal.png" style="width:750px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/24rta.png" style="width:750px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/25rta.png" style="width:750px;">
 
 ## Step 15 Tear down:
 When done, terminate the instance to avoid charges.
