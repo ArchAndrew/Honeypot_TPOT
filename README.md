@@ -60,13 +60,10 @@ sudo apt install git
 git clone https://github.com/telekom-security/tpotce.git
 ```
 
-
-<img src= "https://github.com/ArchAndrew/Test/assets/125866011/b3bcd586-98ae-4785-bdb2-84dd2513a54e" alt="image description" style="width:450px;">
-
 ## Step 7 Navigate to folder: 
 Once the repo has been successfully cloned, in the terminal enter “ls” to view the folder “tpotce” and “cd” into it and “ls” again like so:
 
-<img src= "https://github.com/ArchAndrew/Test/assets/125866011/b3bcd586-98ae-4785-bdb2-84dd2513a54e" alt="image description" style="width:450px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/9tpotfile.png" style="width:750px;">
 
 ## Step 8 Install bash script:
 We need to run the bash script “install.sh” to do run this command:
@@ -74,50 +71,56 @@ We need to run the bash script “install.sh” to do run this command:
 sudo ./install.sh --type=user  
 ```
 You will eventually see this screen enter “y”
-<img src= "https://github.com/ArchAndrew/Test/assets/125866011/b3bcd586-98ae-4785-bdb2-84dd2513a54e" alt="image description" style="width:450px;">
+
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/11tpotverify.png" style="width:750px;">
 
 ## Step 9 Choose TPOT Edition:
 1.	You will be taken to a dialog box to choose your edition. Choose standard and press enter. 
 2.	You then will create a username and password. After this installation will continue.
 
-<img src= "https://github.com/ArchAndrew/Test/assets/125866011/b3bcd586-98ae-4785-bdb2-84dd2513a54e" alt="image description" style="width:450px;">
-<img src= "https://github.com/ArchAndrew/Test/assets/125866011/b3bcd586-98ae-4785-bdb2-84dd2513a54e" alt="image description" style="width:450px;">
-<img src= "https://github.com/ArchAndrew/Test/assets/125866011/b3bcd586-98ae-4785-bdb2-84dd2513a54e" alt="image description" style="width:450px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/12standardpot.png" style="width:750px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/13username.png" style="width:750px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/14pw.png" style="width:750px;">
+
+
 ## Step 10 Reconfigure Security Group:
 Once the installation is complete you will notice that you will be kicked off the server. This is a good thing as TPOT has made some new configuration to your security group and now for security purposes you are no longer allowed to connect to the server via ssh port 22. So, here’s how we fix this:
 1.	Go back to the AWS console. Go EC2>click Your instance id>security
 
-<img src= "https://github.com/ArchAndrew/Test/assets/125866011/b3bcd586-98ae-4785-bdb2-84dd2513a54e" alt="image description" style="width:450px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/15security.png" style="width:750px;">
 
 2.	Click on your security group and then edit inbound rules.
 
-<img src= "https://github.com/ArchAndrew/Test/assets/125866011/b3bcd586-98ae-4785-bdb2-84dd2513a54e" alt="image description" style="width:450px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/16sg.png" style="width:750px;">
 
-<img src= "https://github.com/ArchAndrew/Test/assets/125866011/b3bcd586-98ae-4785-bdb2-84dd2513a54e" alt="image description" style="width:450px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/17editin.png" style="width:750px;">
 
 3.	Change ssh to *custom TCP* port range for port *64297*, for source choose *my ip* and for description label it whatever you like, I named mine “This is for web portal”. *Note* that in the following image my port is different, however I’ve found that the above configuration works best.
 -	Now click, *add rule* choose *custom TCP* port range for port *64295*, for source choose *my ip* and for description I labelled it “This is to SSH in” 
 -	Lastly, add another rule. This is also *custom TCP*, for the port range *1-64000*, for source choose *anywhere ipv4* and for description I put “For the bad guys”.
 
-<img src= "https://github.com/ArchAndrew/Test/assets/125866011/b3bcd586-98ae-4785-bdb2-84dd2513a54e" alt="image description" style="width:450px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/sgmod.png" style="width:750px;">
 
 ## Step 11 SSH with new port:
 -	Now we initially used the code in line 5 of the ssh client from AWS console to ssh into the instance, however since our configuration we must enter in through our new port. Therefore, we will need to make a modification to that code.  
 -	Go to your terminal and press the up arrow the last code that you entered into it (which should be line 5 should populate. On the end of it type *-p 64295* (this is our ssh) like so:
 
-<img src= "https://github.com/ArchAndrew/Test/assets/125866011/b3bcd586-98ae-4785-bdb2-84dd2513a54e" alt="image description" style="width:450px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/sgmod.png" style="width:750px;">
 
 ## Step 12 Enter path:
 Let’s again, ensure that we can access our “tpotce” folder
-<img src= "https://github.com/ArchAndrew/Test/assets/125866011/b3bcd586-98ae-4785-bdb2-84dd2513a54e" alt="image description" style="width:450px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/18newssh.png" style="width:750px;">
 
 ## Step 13 Enter web portal:
 1.	Go back to the console, click instance id and copy your *public IPv4 address*
 2.	Open a new window and in the browser enter: *https://* then paste your address behind it.
 3.	Then behind your address type “:” and then the port number you configured for the web portal in your security group. Which is *64297* and press enter.
 4.	You will see a warning message. Click advanced and proceed. After that you will be prompted to enter the username and password that you created.
-<img src= "https://github.com/ArchAndrew/Test/assets/125866011/b3bcd586-98ae-4785-bdb2-84dd2513a54e" alt="image description" style="width:450px;">
-<img src= "https://github.com/ArchAndrew/Test/assets/125866011/b3bcd586-98ae-4785-bdb2-84dd2513a54e" alt="image description" style="width:450px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/19tpotfiles2.png" style="width:750px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/20ipv4.png" style="width:750px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/21Signin.png" style="width:750px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/22enterweb.png" style="width:750px;">
+
 
 ## Step 14 Welcome to TPOT:
 You will see the homepage where you can select *Attack Map* and view which attacks are attacking your server and from which region the attack is coming from. This is a good way to create a “sitting duck” while you watch and study your attacker’s patterns. 
