@@ -78,9 +78,9 @@ You will eventually see this screen enter “y”
 1.	You will be taken to a dialog box to choose your edition. Choose standard and press enter. 
 2.	You then will create a username and password. After this installation will continue.
 
-<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/12standardpot.png" style="width:750px;">
-<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/13username.png" style="width:750px;">
-<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/14pw.png" style="width:750px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/12standardpot.png" style="width:650px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/13username.png" style="width:650px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/14pw.png" style="width:650px;">
 
 
 ## Step 10 Reconfigure Security Group:
