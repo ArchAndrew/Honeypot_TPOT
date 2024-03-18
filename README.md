@@ -136,4 +136,6 @@ When done, terminate the instance to avoid charges.
 
 *Note: You'll be charged for the running time, even if not actively using the instance.*
 
+## This concludes this project. Well done! :clap:
+
 
