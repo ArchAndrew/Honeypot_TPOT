@@ -110,7 +110,7 @@ Once the installation is complete you will notice that you will be kicked off th
 ## Step 12 Enter path:
 Let’s again, ensure that we can access our “tpotce” folder
 
-<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/19tpotfiles2.png" style="width:650px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/19tpotfiles2.png" style="width:750px;">
 
 ## Step 13 Enter web portal:
 1.	Go back to the console, click instance id and copy your *public IPv4 address*
