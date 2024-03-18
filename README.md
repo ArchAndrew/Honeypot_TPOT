@@ -18,8 +18,8 @@ A honeypot is a security mechanism used in cybersecurity to detect, deflect, or 
 ## Step 2: Configure the Instance
 Configure the following settings for your EC2 instance:
 
-- ***Instance Type:*** Determine the CPU, memory, and storage resources for your workload. Choose **t2.xlarge**
-- ***Network Settings:*** Specify the subnet and security group for your instance. Leave this as default.
+- Instance Type: Determine the CPU, memory, and storage resources for your workload. Choose **t2.xlarge**
+- Network Settings: Specify the subnet and security group for your instance. Leave this as default.
 - **Key Pair:** Create or use an existing key pair for SSH authentication. I will call my key “mypot”. This key when created will be downloaded to you downloads folder.
 - **Configure Storage:** Specify 128gb gp2. This is the requirement for the TPOT, the storage is needed for log collection.
 Your screen should look like this:
