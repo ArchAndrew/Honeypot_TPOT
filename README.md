@@ -105,18 +105,19 @@ Once the installation is complete you will notice that you will be kicked off th
 -	Now we initially used the code in line 5 of the ssh client from AWS console to ssh into the instance, however since our configuration we must enter in through our new port. Therefore, we will need to make a modification to that code.  
 -	Go to your terminal and press the up arrow the last code that you entered into it (which should be line 5 should populate. On the end of it type *-p 64295* (this is our ssh) like so:
 
-<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/sgmod.png" style="width:750px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/18newssh.png" style="width:750px;">
 
 ## Step 12 Enter path:
 Let’s again, ensure that we can access our “tpotce” folder
-<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/18newssh.png" style="width:750px;">
+
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/19tpotfiles2.png" style="width:650px;">
 
 ## Step 13 Enter web portal:
 1.	Go back to the console, click instance id and copy your *public IPv4 address*
 2.	Open a new window and in the browser enter: *https://* then paste your address behind it.
 3.	Then behind your address type “:” and then the port number you configured for the web portal in your security group. Which is *64297* and press enter.
 4.	You will see a warning message. Click advanced and proceed. After that you will be prompted to enter the username and password that you created.
-<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/19tpotfiles2.png" style="width:650px;">
+
 <img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/20ipv4.png" style="width:650px;">
 <img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/21Signin.png" style="width:650px;">
 <img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/22enterweb.png" style="width:650px;">
