@@ -13,7 +13,7 @@ A honeypot is a security mechanism used in cybersecurity to detect, deflect, or 
 2. Click on **Launch Instance**. Name it. I will call mine “honey_im_home”.
 3. Select an AMI from the list based on your requirements. For this guide, we'll use the [Debian 11 AMI]( https://aws.amazon.com/marketplace/pp/prodview-l5gv52ndg5q6i#pdp-overview).
 
-<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/1debianami.png" alt="image description" style="width:750px;">
+<img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/1debianami.png" alt="image description" style="width:950px;">
 
 ## Step 2: Configure the Instance
 Configure the following settings for your EC2 instance:
