@@ -66,7 +66,7 @@ Once the repo has been successfully cloned, in the terminal enter “ls” to vi
 <img src= "https://github.com/ArchAndrew/Honeypot_TPOT/blob/main/9tpotfile.png" style="width:750px;">
 
 ## Step 8 Install bash script:
-We need to run the bash script “install.sh” to do run this command:
+We need to run the bash script “install.sh” to do so run this command:
 ```bash
 sudo ./install.sh --type=user  
 ```
